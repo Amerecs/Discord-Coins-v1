@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require("discord.js");
 const fs = require("fs");
 module.exports = {
 data: new SlashCommandBuilder()
-.setName("cord")
+.setName("coins")
 .setDescription("Manage your coins.")
 .addUserOption(option =>
 option.setName("user")
