@@ -8,7 +8,7 @@ module.exports = {
     async execute(client, interaction) {
         let data;
         try {
-            data = JSON.parse(fs.readFileSync("./cord.json", "utf8"));
+            data = JSON.parse(fs.readFileSync("./coins.json", "utf8"));
         } catch (error) {
             data = {};
         }
@@ -46,7 +46,7 @@ const currentTime = Date.now();
             lastClaimTime: Date.now()
         };
 
-        fs.writeFileSync("./cord.json", JSON.stringify(data, null, 2));
+        fs.writeFileSync("./coins.json", JSON.stringify(data, null, 2));
         
         
         const embed1 = new EmbedBuilder()
