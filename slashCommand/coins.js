@@ -25,7 +25,7 @@ const amount = parseInt(interaction.options.getString("amount"));
 const reason = interaction.options.getString("reason");
 let data;
 try {
-data = JSON.parse(fs.readFileSync("./cord.json", "utf8"));
+data = JSON.parse(fs.readFileSync("./coins.json", "utf8"));
 } catch (error) {
 data = {};
 }
@@ -45,7 +45,7 @@ return interaction .reply(`**:thinking: | ${ interaction . user .username}, your
 }
 data[ interaction.user.id ].coins -= amount;
 data[targetId].coins += amount;
-fs.writeFileSync("./cord.json", JSON.stringify(data, null, 2));
+fs.writeFileSync("./coins.json", JSON.stringify(data, null, 2));
 return interaction .reply(`**${ interaction . user .username} has transferred \$${amount} to <@!${targetId}>.**`);
 },
 };
