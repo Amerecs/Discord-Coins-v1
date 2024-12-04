@@ -51,7 +51,7 @@ const currentTime = Date.now();
         
         const embed1 = new EmbedBuilder()
         .setTitle("> **- Daily reward claimed**")
-.setDescription(`> **| You successfully claimed your daily reward of ${coins} coins!**`)
+.setDescription(`> **You successfully claimed your daily reward of ${coins} coins!**`)
         .setColor("#b811ff")
         .setTimestamp();
       
